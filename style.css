@@ -1,1 +1,114 @@
 /* Arquivo de configuração de estilos */
+:root{
+    --mount-meadow:dodgerblue;
+    --night-rider:#343434;
+    --transition:all 0.5s ease-in-out;
+    --white-smoke: #f0f0f0;
+}
+.header{
+    background-color: green;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121212;
+    z-index: 999;
+}
+.logo-e-toggler{
+    font-size: 1.65rem;
+    padding: 0.2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-logo{
+    background-color: transparent;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--night-rider);
+    width: 280px;
+    height: 72px;
+}
+.navbar-logo .planeta{
+    width: 20%;
+    height: 100%;
+    object-fit: contain;
+}
+.navbar-logo .educaplaneta{
+    width: 70%;
+    height: 100%;
+    object-fit: contain;
+}
+.navbar-toggler{
+    border: none;
+    color: var(--mount-meadow);
+}
+.navbar-nav{
+    margin: 0.2rem 0 0.6rem 0;
+}
+.nav-item{
+    padding: 0.6rem 0;
+}
+.nav-item a{
+    text-decoration: none;
+    color: var(--white-smoke);
+}
+.nav-link{
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    opacity: 0.65;
+    transition: var(--transition);
+}
+.nav-link:hover{
+    color: var(--mount-meadow)!important;
+}
+.navbar-collapse{
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar .my-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar-logo{
+        background-color: transparent;
+        width: 350px;
+        height: 72px;
+        color: var(--white-smoke);
+        font-size: 2rem;
+        justify-content: center;
+    }
+    .navbar-logo .planeta{
+        width: 25%;
+        padding-right: 10px;
+        padding-left: 20px;
+    }
+    .navbar-logo .educaplaneta{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .navbar-toggler{
+        display: none;
+    }
+    .navbar-collapse{
+        display: block !important;
+    }
+    .navbar-nav{
+        display: flex;
+        margin: 0%;
+    }
+    .nav-item{
+        margin-left: 1.8rem;
+    }
+    .nav-link{
+        color: var(--white-smoke);
+    }
+}
