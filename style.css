@@ -5,55 +5,19 @@
     --transition:all 0.5s ease-in-out;
     --white-smoke: #f0f0f0;
 }
-body{
-    background-image: url('https://www.eusemfronteiras.com.br/wp-content/uploads/2019/08/riacho-em-floresta-amazonica.jpg'); /* Substitua pelo caminho da sua imagem */
+
+body {
+    background-image: url('https://www.eusemfronteiras.com.br/wp-content/uploads/2019/08/riacho-em-floresta-amazonica.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0;  /* Remove as margens padrão do body */
-    height: 100vh;  /* Garante que a imagem cubra toda a altura da tela */
-    color: white;  /* Ajuste a cor do texto para garantir que seja legível sobre a imagem */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    background-attachment: fixed;
 
-    font-family: 'Roboto', sans-serif; /* Define a fonte Roboto */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-/* Estilo para o bloco da citação */
-blockquote {
-    font-size: 4rem; /* Aumenta o tamanho da fonte */
-    font-weight: 400; /* Peso da fonte normal */
-    color: white; /* Cor do texto */
-    line-height: 1.5; /* Espaçamento entre linhas */
-    max-width: 80%; /* Limita a largura da citação */
-    border-left: 5px solid #007BFF; /* Linha ao lado da citação */
-    padding-left: 20px; /* Espaço entre a linha e o texto */
-    margin: 0;
-    text-align: center;
-}
-blockquote h1{
-    font-size: 2rem;
-}
-blockquote h2{
-    color: red;
-}
-
-/* Estilo para o autor */
-footer {
-    font-size: 1.8rem; /* Fonte menor para o autor */
-    color: white; /* Cor mais suave para o nome do autor */
-    margin-top: 10px;
-    font-style: italic; /* Deixa o nome do autor em itálico */
+    color: white;
 }
 
 .header{
@@ -123,6 +87,54 @@ footer {
     display: none;
 }
 
+main {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+/* Citação */
+blockquote {
+    font-size: 3rem; /* Aumenta o tamanho da fonte */
+    font-weight: 400; /* Peso da fonte normal */
+    color: black;
+    line-height: 1.5; /* Espaçamento entre linhas */
+    max-width: 80%; /* Limita a largura da citação */
+    border-left: 5px solid #007BFF; /* Linha ao lado da citação */
+    padding-left: 20px; /* Espaço entre a linha e o texto */
+    margin: 0;
+    text-align: center;
+}
+
+/* Autor da citação */
+footer {
+    font-size: 1.8rem; /* Fonte menor para o autor */
+    color: black; /* Cor mais suave para o nome do autor */
+    margin-top: 10px;
+    font-style: italic; /* Deixa o nome do autor em itálico */
+}
+
+section {
+    margin-top: 100px;
+    padding: 0 50px;
+}
+
+section h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+section h2{
+    text-align: center;
+}
+
 @media screen and (min-width: 992px) {
     .navbar .my-container{
         display: flex;
@@ -163,6 +175,7 @@ footer {
         color: var(--white-smoke);
     }
 }
+
 .navbar-botaoreciclagem{
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -177,34 +190,70 @@ footer {
 
 /* Estilo para o botão */
 .btn-imagem {
-        background-color: transparent;  /* Cor de fundo azul */
-        color: white;  /* Cor do texto */
-        font-size: 25px;  /* Tamanho da fonte reduzido */
-        border: none;  /* Remove a borda padrão do botão */
-        padding: 8px 16px;  /* Reduz o padding (espaçamento interno) */
-        display: flex;  /* Usado para alinhar a imagem e o texto dentro do botão */
-        flex-direction: column;  /* Empilha imagem e texto verticalmente */
-        align-items: center;  /* Alinha a imagem e o texto centralizados */
-        border-radius: 5px;  /* Borda arredondada */
-        cursor: pointer;  /* Mostra o cursor de "mão" quando passar sobre o botão */
-        transition: background-color 0.3s;  /* Transição suave de cor ao passar o mouse */
+    background-color: transparent;  /* Cor de fundo azul */
+    color: black;  /* Cor do texto */
+    font-size: 1rem;  /* Tamanho da fonte reduzido */
+    border: none;  /* Remove a borda padrão do botão */
+    padding: 8px 16px;  /* Reduz o padding (espaçamento interno) */
+    display: flex;  /* Usado para alinhar a imagem e o texto dentro do botão */
+    flex-direction: column;  /* Empilha imagem e texto verticalmente */
+    align-items: center;  /* Alinha a imagem e o texto centralizados */
+    border-radius: 5px;  /* Borda arredondada */
+    cursor: pointer;  /* Mostra o cursor de "mão" quando passar sobre o botão */
+    transition: background-color 0.3s;  /* Transição suave de cor ao passar o mouse */
 }
 
 /* Estilo para a imagem dentro do botão */
 .btn-imagem img {
-    width: 100px;  /* Ajusta o tamanho da imagem */
-    height: 100px;  /* Ajusta o tamanho da imagem */
+    width: 120px;  /* Ajusta o tamanho da imagem */
+    height: 120px;  /* Ajusta o tamanho da imagem */
     margin-right: 0px;  /* Espaço entre a imagem e o texto */
+    border-radius: 50%;
 }
 
 /* Estilo para o hover do botão */
 .btn-imagem:hover {
-    background-color: #0056b3;  /* Altera a cor do fundo ao passar o mouse */
+    background-color: lightgreen;  /* Altera a cor do fundo ao passar o mouse */
+    opacity: 50%;
 }
+
+/* Menu praticas */
+.menu_praticas {
+    width: 80%;
+    display: flex;
+    direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+.menu_praticas a {
+    text-decoration: none;
+}
+
 .texto-principal{
     text-align: justify;
     font-size: 1.3rem;
-    background-color: black;
-    opacity: 70%;
-    color: var(--white-smoke);
+    color: black;
+}
+
+
+h1, h2 {
+    color: black;
+}
+
+h3 {
+    color: black;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ol {
+    margin-left: 20px;
+}
+
+ol li {
+    color: black;
+    margin-bottom: 10px;
 }
